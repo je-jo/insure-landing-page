@@ -1,0 +1,84 @@
+ /* dm-serif-display-regular - latin */
+ @font-face {
+     font-family: 'DM Serif Display';
+     font-style: normal;
+     font-weight: 400;
+     src: local(''),
+         url('../fonts/dm-serif-display-v10-latin-regular.woff2') format('woff2'),
+         url('../fonts/dm-serif-display-v10-latin-regular.woff') format('woff');
+ }
+
+ /* karla-regular - latin */
+ @font-face {
+     font-family: 'Karla';
+     font-style: normal;
+     font-weight: 400;
+     src: local(''),
+         url('../fonts/karla-v23-latin-regular.woff') format('woff2'),
+         url('../fonts/karla-v23-latin-regular.woff') format('woff');
+ }
+
+ /* karla-700 - latin */
+ @font-face {
+     font-family: 'Karla';
+     font-style: normal;
+     font-weight: 700;
+     src: local(''),
+         url('../fonts/karla-v23-latin-700.woff2') format('woff2'),
+         url('../fonts/karla-v23-latin-700.woff') format('woff');
+ }
+
+ //custom colors
+ $dark-violet: hsl(256, 26%, 20%);
+ $grayish-blue: hsl(216, 30%, 68%);
+ $very-dark-violet: hsl(270, 9%, 17%);
+ $dark-grayish-violet: hsl(273, 4%, 51%);
+ $very-light-gray: hsl(0, 0%, 98%);
+
+ $font-family-sans-serif: "Karla", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+ $headings-font-family: "DM Serif Display", serif;
+
+ $headings-font-weight: 400;
+ $headings-line-height: 1;
+ $h1-font-size: clamp(3rem, 2.5rem + 2vw, 4.5rem);
+ $h3-font-size: 1.8rem;
+ $h4-font-size: 1rem;
+
+ $link-color: $dark-violet;
+
+ $btn-border-radius: 0;
+ $btn-padding-x: 2rem;
+
+ @import "../../node_modules/bootstrap/scss/_functions";
+ @import "../../node_modules/bootstrap/scss/_variables";
+ @import "../../node_modules/bootstrap/scss/_mixins";
+ @import "../../node_modules/bootstrap/scss/_reboot";
+
+
+
+
+ @import "../../node_modules/bootstrap/scss/bootstrap";
+
+  //custom properties
+
+ p {
+     line-height: 1.6;
+ }
+
+ h3 {
+     letter-spacing: -0.9px;
+ }
+
+ h4 {
+     font-family: $font-family-sans-serif;
+     font-weight: $font-weight-bold;
+ }
+
+ a {
+    text-transform: uppercase;
+    font-weight: $font-weight-bold;
+ }
+
+ li {
+    line-height: 2;
+ }
