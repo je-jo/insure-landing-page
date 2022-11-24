@@ -28,12 +28,20 @@
          url('../fonts/karla-v23-latin-700.woff') format('woff');
  }
 
+ // 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+ @import "../../node_modules/bootstrap/scss/functions";
+
+ // 2. Include any default variable overrides here
+
  //custom colors
- $dark-violet: hsl(256, 26%, 20%);
- $grayish-blue: hsl(216, 30%, 68%);
- $very-dark-violet: hsl(270, 9%, 17%);
- $dark-grayish-violet: hsl(273, 4%, 51%);
- $very-light-gray: hsl(0, 0%, 98%);
+
+$dark-grayish-violet: hsl(273, 4%, 51%);
+
+$primary:       hsl(256, 26%, 20%); //dark-violet;
+$secondary:     hsl(216, 30%, 68%); //grayish-blue;
+$info:          hsl(273, 4%, 51%); //dark-grayish-violet;
+$light:         hsl(0, 0%, 98%); //very-light-gray;
+$dark:          hsl(270, 9%, 17%); //very-dark-violet;
 
  $font-family-sans-serif: "Karla", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
  $headings-font-family: "DM Serif Display", serif;
@@ -44,22 +52,33 @@
  $h3-font-size: 1.8rem;
  $h4-font-size: 1rem;
 
- $link-color: $dark-violet;
+$link-decoration: none;
+$link-hover-decoration: underline;
 
  $btn-border-radius: 0;
  $btn-padding-x: 2rem;
 
- @import "../../node_modules/bootstrap/scss/_functions";
- @import "../../node_modules/bootstrap/scss/_variables";
- @import "../../node_modules/bootstrap/scss/_mixins";
- @import "../../node_modules/bootstrap/scss/_reboot";
+ // 3. Include remainder of required Bootstrap stylesheets
+ @import "../../node_modules/bootstrap/scss/variables";
+ @import "../../node_modules/bootstrap/scss/maps";
+ @import "../../node_modules/bootstrap/scss/mixins";
+ @import "../../node_modules/bootstrap/scss/utilities";
 
+ // 4. Include any optional Bootstrap components as you like
+ @import "../../node_modules/bootstrap/scss/root";
+ @import "../../node_modules/bootstrap/scss/reboot";
+ @import "../../node_modules/bootstrap/scss/type";
+ @import "../../node_modules/bootstrap/scss/images";
+ @import "../../node_modules/bootstrap/scss/containers";
+ @import "../../node_modules/bootstrap/scss/grid";
+ @import "../../node_modules/bootstrap/scss/buttons";
+ @import "../../node_modules/bootstrap/scss/transitions";
+ @import "../../node_modules/bootstrap/scss/nav";
+ @import "../../node_modules/bootstrap/scss/navbar";
+ @import "../../node_modules/bootstrap/scss/list-group";
+ 
 
-
-
- @import "../../node_modules/bootstrap/scss/bootstrap";
-
-  //custom properties
+ // 5. Add additional custom code here
 
  p {
      line-height: 1.6;
@@ -75,10 +94,14 @@
  }
 
  a {
-    text-transform: uppercase;
-    font-weight: $font-weight-bold;
+     text-transform: uppercase;
+     font-weight: $font-weight-bold;
  }
 
+
  li {
-    line-height: 2;
+     line-height: 2;
  }
+
+ @import "../../node_modules/bootstrap/scss/utilities/api";
+
