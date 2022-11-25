@@ -67,12 +67,12 @@
  @import "../../node_modules/bootstrap/scss/maps";
  @import "../../node_modules/bootstrap/scss/mixins";
 
- $spacers: map-merge(
-    $spacers, (
-    6: $spacer * 5,
-    7: $spacer * 10,
-    )
-  );
+//  $spacers: map-merge(
+//     $spacers, (
+//     6: $spacer * 5,
+//     7: $spacer * 10,
+//     )
+//   );
 
  @import "../../node_modules/bootstrap/scss/utilities";
 
@@ -81,21 +81,19 @@
  $utilities: map-merge(
     $utilities,
     (
-        "width": (
-            property: width,
-            class: w,
-            values: (
-              79: 79%,
-            )
-          )
+         "max-width": (
+            property: max-width,
+            class: mw,
+            values: ("custom": 1137.5px)
+        )
     )
-  );
+);
 
  //optional Bootstrap components
  @import "../../node_modules/bootstrap/scss/root";
  @import "../../node_modules/bootstrap/scss/reboot";
  @import "../../node_modules/bootstrap/scss/type";
- @import "../../node_modules/bootstrap/scss/images";
+ //@import "../../node_modules/bootstrap/scss/images";
  @import "../../node_modules/bootstrap/scss/containers";
  @import "../../node_modules/bootstrap/scss/grid";
  @import "../../node_modules/bootstrap/scss/buttons";
@@ -127,6 +125,14 @@
  li {
      line-height: 2;
  }
+
+ .g-custom-2 {
+    gap: 2rem;
+ }
+
+.py-custom-10 {
+    padding: 10rem 0;
+}
 
  @import "../../node_modules/bootstrap/scss/utilities/api";
 
