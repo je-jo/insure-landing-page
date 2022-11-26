@@ -93,7 +93,7 @@
  @import "../../node_modules/bootstrap/scss/root";
  @import "../../node_modules/bootstrap/scss/reboot";
  @import "../../node_modules/bootstrap/scss/type";
- //@import "../../node_modules/bootstrap/scss/images";
+ @import "../../node_modules/bootstrap/scss/images";
  @import "../../node_modules/bootstrap/scss/containers";
  @import "../../node_modules/bootstrap/scss/grid";
  @import "../../node_modules/bootstrap/scss/buttons";
@@ -127,12 +127,25 @@
  }
 
  .g-custom-2 {
-    gap: 2rem;
+    gap: 2rem !important;
+ }
+
+ .pb-custom-2 {
+    padding-bottom: 2rem !important;
  }
 
 .py-custom-10 {
     padding: 10rem 0;
 }
+
+@media screen and (min-width: 768px) {
+    picture img {
+      width: 540px;
+      top: 17%;
+    //   height: 631px;
+    //   right: 15%;
+    }
+  }
 
  @import "../../node_modules/bootstrap/scss/utilities/api";
 
