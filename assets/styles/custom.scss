@@ -39,6 +39,14 @@
  $light: hsl(0, 0%, 98%); //very-light-gray;
  $dark: hsl(270, 9%, 17%); //very-dark-violet;
 
+ $container-max-widths: (
+     sm: 540px,
+     md: 720px,
+     lg: 960px,
+     xl: 1140px,
+     xxl: 1150px //changed this one only
+ );
+
  $font-family-sans-serif: "Karla", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
  $headings-font-family: "DM Serif Display", serif;
 
@@ -57,37 +65,16 @@
  $btn-border-radius: 0;
  $btn-padding-x: 1.8rem;
 
+ $list-inline-padding: 1rem;
+
 
 
  //required Bootstrap stylesheets
  @import "../../node_modules/bootstrap/scss/variables";
-
-
-
  @import "../../node_modules/bootstrap/scss/maps";
  @import "../../node_modules/bootstrap/scss/mixins";
 
-//  $spacers: map-merge(
-//     $spacers, (
-//     6: $spacer * 5,
-//     7: $spacer * 10,
-//     )
-//   );
-
  @import "../../node_modules/bootstrap/scss/utilities";
-
-
-
- $utilities: map-merge(
-    $utilities,
-    (
-         "max-width": (
-            property: max-width,
-            class: mw,
-            values: ("custom": 1137.5px)
-        )
-    )
-);
 
  //optional Bootstrap components
  @import "../../node_modules/bootstrap/scss/root";
@@ -98,9 +85,9 @@
  @import "../../node_modules/bootstrap/scss/grid";
  @import "../../node_modules/bootstrap/scss/buttons";
  @import "../../node_modules/bootstrap/scss/transitions";
-//  @import "../../node_modules/bootstrap/scss/nav";
-//  @import "../../node_modules/bootstrap/scss/navbar";
-//  @import "../../node_modules/bootstrap/scss/list-group";
+ //  @import "../../node_modules/bootstrap/scss/nav";
+ //  @import "../../node_modules/bootstrap/scss/navbar";
+ //  @import "../../node_modules/bootstrap/scss/list-group";
 
  //custom styles
 
@@ -126,26 +113,62 @@
      line-height: 2;
  }
 
- .g-custom-2 {
-    gap: 2rem !important;
+ .list-unstyled {
+    margin-bottom: 0rem !important;
  }
 
- .pb-custom-2 {
-    padding-bottom: 2rem !important;
+ .gap-custom-2-5 {
+     row-gap: 2.5rem !important;
  }
 
-.py-custom-10 {
-    padding: 10rem 0;
-}
+ .pb-custom-2-5 {
+     padding-bottom: 2.5rem !important;
+ }
 
-@media screen and (min-width: 768px) {
-    picture img {
-      width: 540px;
-      top: 17%;
-    //   height: 631px;
-    //   right: 15%;
+ .py-custom-10 {
+     padding: 10rem 0;
+ }
+
+ @media screen and (min-width: 768px) {
+     picture img {
+         width: 540px;
+         top: 16%;
+     }
+ }
+
+
+
+ @mixin deco-line {
+     content: "";
+     display: block;
+     height: 45px;
+     width: 150px;
+     border-top: 1px solid currentColor;
+     opacity: 0.3;
+     margin: 0 auto;
+
+     @media screen and (min-width: 768px) {
+         margin: unset;
+
+     }
+ }
+
+ header .h1::before {
+     @include deco-line();
+     display: none;
+     @media screen and (min-width: 768px) {
+        display: block;
     }
-  }
+ }
+
+ main .h1::before {
+     @include deco-line();
+     border-color: $primary;
+ }
+
+
+
+
+
 
  @import "../../node_modules/bootstrap/scss/utilities/api";
-
