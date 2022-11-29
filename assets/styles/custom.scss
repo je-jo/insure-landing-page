@@ -67,13 +67,10 @@
 
  $list-inline-padding: 1rem;
 
-
-
  //required Bootstrap stylesheets
  @import "../../node_modules/bootstrap/scss/variables";
  @import "../../node_modules/bootstrap/scss/maps";
  @import "../../node_modules/bootstrap/scss/mixins";
-
  @import "../../node_modules/bootstrap/scss/utilities";
 
  //optional Bootstrap components
@@ -87,13 +84,51 @@
  @import "../../node_modules/bootstrap/scss/transitions";
  //  @import "../../node_modules/bootstrap/scss/nav";
  //  @import "../../node_modules/bootstrap/scss/navbar";
- //  @import "../../node_modules/bootstrap/scss/list-group";
 
  //custom styles
 
- p {
-     line-height: 1.6;
+ .custom-hero {
+     padding-bottom: 2rem;
+     @media screen and (min-width: 768px) {
+        padding-bottom: 0;
+         margin-bottom: 10rem;
+     }
+
  }
+
+ section:first-child {
+    margin-bottom: 4rem;
+    @media screen and (min-width: 768px) {
+        margin-bottom: 5rem;
+    }
+ }
+
+ section:last-child {
+    padding: 0 2rem;
+    margin-bottom: 11.5rem;
+    @media screen and (min-width: 768px) {
+        padding: 0 5rem;
+        margin-bottom: 9rem;
+    }
+ }
+
+
+
+ .custom-lbr {
+    @media screen and (min-width: 768px) {
+        display: block;
+    }
+ }
+
+ hr {
+    @media screen and (min-width: 768px) {
+        margin-bottom: 2rem;
+    }
+ }
+
+ p {
+    line-height: 1.6;
+}
 
  h3 {
      letter-spacing: -0.9px;
@@ -114,29 +149,16 @@
  }
 
  .list-unstyled {
-    margin-bottom: 0rem !important;
- }
-
- .gap-custom-2-5 {
-     row-gap: 2.5rem !important;
- }
-
- .pb-custom-2-5 {
-     padding-bottom: 2.5rem !important;
- }
-
- .py-custom-10 {
-     padding: 10rem 0;
+     margin-bottom: 0rem !important;
  }
 
  @media screen and (min-width: 768px) {
      picture img {
          width: 540px;
          top: 16%;
+         margin-bottom: -50px;
      }
  }
-
-
 
  @mixin deco-line {
      content: "";
@@ -149,6 +171,7 @@
 
      @media screen and (min-width: 768px) {
          margin: unset;
+         height: 65px;
 
      }
  }
@@ -156,19 +179,16 @@
  header .h1::before {
      @include deco-line();
      display: none;
+
      @media screen and (min-width: 768px) {
-        display: block;
-    }
+         display: block;
+     }
  }
 
  main .h1::before {
      @include deco-line();
      border-color: $primary;
  }
-
-
-
-
 
 
  @import "../../node_modules/bootstrap/scss/utilities/api";
