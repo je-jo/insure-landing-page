@@ -6,6 +6,7 @@
      src: local(''),
          url('../fonts/dm-serif-display-v10-latin-regular.woff2') format('woff2'),
          url('../fonts/dm-serif-display-v10-latin-regular.woff') format('woff');
+     display: swap;
  }
 
  /* karla-regular - latin */
@@ -16,6 +17,7 @@
      src: local(''),
          url('../fonts/karla-v23-latin-regular.woff') format('woff2'),
          url('../fonts/karla-v23-latin-regular.woff') format('woff');
+     display: swap;
  }
 
  /* karla-700 - latin */
@@ -26,6 +28,7 @@
      src: local(''),
          url('../fonts/karla-v23-latin-700.woff2') format('woff2'),
          url('../fonts/karla-v23-latin-700.woff') format('woff');
+     display: swap;
  }
 
  //import functions first
@@ -35,7 +38,7 @@
 
  $primary: hsl(256, 25%, 20%); //dark-violet;
  $secondary: hsl(216, 30%, 68%); //grayish-blue;
- $info: hsl(273, 4%, 51%); //dark-grayish-violet;
+ $info: hsl(276, 4%, 46%); //dark-grayish-violet - changed lightness to pass contrast checks;
  $light: hsl(0, 0%, 98%); //very-light-gray;
  $dark: hsl(270, 9%, 17%); //very-dark-violet;
 
@@ -80,55 +83,59 @@
  @import "../../node_modules/bootstrap/scss/images";
  @import "../../node_modules/bootstrap/scss/containers";
  @import "../../node_modules/bootstrap/scss/grid";
+ @import "../../node_modules/bootstrap/scss/helpers/visually-hidden";
  @import "../../node_modules/bootstrap/scss/buttons";
  @import "../../node_modules/bootstrap/scss/transitions";
- //  @import "../../node_modules/bootstrap/scss/nav";
- //  @import "../../node_modules/bootstrap/scss/navbar";
+ @import "../../node_modules/bootstrap/scss/nav";
+ @import "../../node_modules/bootstrap/scss/navbar";
 
  //custom styles
 
  .custom-hero {
      padding-bottom: 2rem;
+
      @media screen and (min-width: 768px) {
-        padding-bottom: 0;
+         padding-bottom: 0;
          margin-bottom: 10rem;
      }
 
  }
 
  section:first-child {
-    margin-bottom: 4rem;
-    @media screen and (min-width: 768px) {
-        margin-bottom: 5rem;
-    }
+     margin-bottom: 4rem;
+
+     @media screen and (min-width: 768px) {
+         margin-bottom: 5rem;
+     }
  }
 
  section:last-child {
-    padding: 0 2rem;
-    margin-bottom: 11.5rem;
-    @media screen and (min-width: 768px) {
-        padding: 0 5rem;
-        margin-bottom: 9rem;
-    }
+     padding: 0 2rem;
+     margin-bottom: 11.5rem;
+
+     @media screen and (min-width: 768px) {
+         padding: 0 5rem;
+         margin-bottom: 9rem;
+     }
  }
 
 
 
  .custom-lbr {
-    @media screen and (min-width: 768px) {
-        display: block;
-    }
+     @media screen and (min-width: 768px) {
+         display: block;
+     }
  }
 
  hr {
-    @media screen and (min-width: 768px) {
-        margin-bottom: 2rem;
-    }
+     @media screen and (min-width: 768px) {
+         margin-bottom: 2rem;
+     }
  }
 
  p {
-    line-height: 1.6;
-}
+     line-height: 1.6;
+ }
 
  h3 {
      letter-spacing: -0.9px;

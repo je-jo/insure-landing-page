@@ -17,15 +17,25 @@
 
 <body>
   <header>
-    <!-- <a href="#"><img src="assets/images/logo.svg" alt="Insure"></a>
-    <nav>
-      <ul class="list-unstyled">
-        <li><a href="#">How we work</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Account</a></li>
-        <li><a href="#">View plans</a></li>
-      </ul>
-    </nav> -->
+    <nav class="navbar navbar-expand-md">
+      <div class="container-xl">
+        <a href="#" class="navbar-brand"><img src="assets/images/logo.svg" alt="Insure"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav-main"
+          aria-controls="nav-main" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nav-main">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#">How we work</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Account</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">View plans</a></li>
+          </ul>
+        </div>
+      </div>
+     
+     
+    </nav>
     <div class="bg-primary text-light custom-hero">
       <div class="container text-center text-md-start">
         <div class="row">
@@ -64,21 +74,24 @@
       <h2 class="h1 py-5">We’re different</h2>
       <div class="row py-3 pt-md-5 justify-content-between">
         <div class="col-md-4 mb-5">
-          <img src="assets/images/icons/icon-snappy-process.svg" alt="" aria-hidden="true" class="mb-4">
+          <img src="assets/images/icons/icon-snappy-process.svg" alt="" aria-hidden="true" class="mb-4" width="86"
+            height="86">
           <h3 class="pt-3 pb-2">Snappy Process</h3>
           <p class="lh-base pt-1">Our application process can be completed in minutes, not hours.
             Don’t get
             stuck filling in tedious forms.</p>
         </div>
         <div class="col-md-4 mb-5">
-          <img src="assets/images/icons/icon-affordable-prices.svg" alt="" aria-hidden="true" class="mb-4">
+          <img src="assets/images/icons/icon-affordable-prices.svg" alt="" aria-hidden="true" class="mb-4" width="86"
+            height="86">
           <h3 class="pt-3 pb-2">Affordable Prices</h3>
           <p class="lh-base pt-1">We don’t want you worrying about high monthly costs. Our prices may
             be low,
             but we still offer the best coverage possible.</p>
         </div>
         <div class="col-md-4 mb-5">
-          <img src="assets/images/icons/icon-people-first.svg" alt="" aria-hidden="true" class="mb-4">
+          <img src="assets/images/icons/icon-people-first.svg" alt="" aria-hidden="true" class="mb-4" width="86"
+            height="86">
           <h3 class="pt-3 pb-2">People First</h3>
           <p class="lh-base pt-1">Our plans aren’t full of conditions and clauses to prevent payouts.
             We make
@@ -100,29 +113,36 @@
   <footer>
     <div class="container-fluid bg-light">
       <div class="container">
+        <h2 class="visually-hidden">Learn more</h2>
         <div class="row justify-content-between align-items-center text-center gy-4">
+          <h3 class="visually-hidden">Social Links</h3>
           <div class="col-lg-2 text-lg-start">
-            <a href="#"><img src="assets/images/logo.svg" alt="Insure"></a>
+            <a href="#"><img src="assets/images/logo.svg" alt="Insure" width="112" height="18"></a>
           </div>
           <div class="col-lg-4 col-xl-2">
             <ul class="list-inline">
               <li class="list-inline-item">
-                <a href="#"><img src="assets/images/icons/icon-facebook.svg" alt=""></a>
+                <a href="#"><img src="assets/images/icons/icon-facebook.svg" alt="Insure on Facebook" width="24"
+                    height="24"></a>
               </li>
               <li class="list-inline-item">
-                <a href="#"><img src="assets/images/icons/icon-twitter.svg" alt=""></a>
+                <a href="#"><img src="assets/images/icons/icon-twitter.svg" alt="Insure on Twitter" width="24"
+                    height="24"></a>
               </li>
               <li class="list-inline-item">
-                <a href="#"><img src="assets/images/icons/icon-pinterest.svg" alt=""></a>
+                <a href="#"><img src="assets/images/icons/icon-pinterest.svg" alt="Insure on Pinterest" width="24"
+                    height="24"></a>
               </li>
               <li class="list-inline-item">
-                <a href="#"><img src="assets/images/icons/icon-instagram.svg" alt=""></a>
+                <a href="#"><img src="assets/images/icons/icon-instagram.svg" alt="Insure on Instagram" width="24"
+                    height="24"></a>
               </li>
             </ul>
           </div>
         </div>
         <hr>
         <div class="row text-center text-lg-start mt-4">
+          <h3 class="visually-hidden">Learn more about us</h3>
           <div class="col-md-3 mb-3">
             <h4 class="text-uppercase text-info py-3">Our company</h4>
             <ul class="list-unstyled">
@@ -192,7 +212,7 @@
     </div>
 
   </footer>
-
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
