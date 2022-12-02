@@ -129,20 +129,31 @@
      }
  }
 
- .show .navbar-nav {
+ .show .navbar-nav,
+ .collapsing .navbar-nav {
     position: absolute;
     top: 4rem;
     left: 0;
     right: 0;
     height: 69vh;
+    padding-top: 3rem;
     gap: 1.5rem;
     z-index: 999;
     background-color: $dark;
  }
 
- .show .nav-link {
+ .show .nav-link,
+ .collapsing .nav-link {
     font-size: 1.3rem;
+    font-weight: 400;
     color: $light;
+ }
+
+ .show .btn-sm,
+ .collapsing .btn-sm {
+    width: 87%;
+    color: $light;
+    border-color: $light;
  }
 
  p {
