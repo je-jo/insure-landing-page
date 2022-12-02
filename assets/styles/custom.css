@@ -2718,16 +2718,20 @@ section:last-child {
   }
 }
 
-@media screen and (min-width: 768px) {
-  .custom-lbr {
-    display: block;
-  }
+.show .navbar-nav {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+  height: 69vh;
+  gap: 1.5rem;
+  z-index: 999;
+  background-color: hsl(270deg, 9%, 17%);
 }
 
-@media screen and (min-width: 768px) {
-  hr {
-    margin-bottom: 2rem;
-  }
+.show .nav-link {
+  font-size: 1.3rem;
+  color: hsl(0deg, 0%, 98%);
 }
 
 p {
@@ -2756,23 +2760,38 @@ li {
   letter-spacing: 1.2px;
 }
 
+.btn-sm {
+  letter-spacing: 1.5px;
+}
+
 .list-unstyled {
   margin-bottom: 0rem !important;
 }
 
 @media screen and (min-width: 768px) {
   picture img {
-    width: 540px;
     top: 16%;
     margin-bottom: -50px;
   }
 }
+@media screen and (min-width: 768px) {
+  .custom-lbr {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  hr {
+    margin-bottom: 2rem;
+  }
+}
+
 header .h1::before {
   content: "";
   display: block;
   height: 45px;
   width: 150px;
-  border-top: 1px solid currentColor;
+  border-top: 1px solid hsl(256deg, 25%, 20%);
   opacity: 0.3;
   margin: 0 auto;
   display: none;
@@ -2786,6 +2805,7 @@ header .h1::before {
 @media screen and (min-width: 768px) {
   header .h1::before {
     display: block;
+    border-color: currentColor;
   }
 }
 
@@ -2794,10 +2814,9 @@ main .h1::before {
   display: block;
   height: 45px;
   width: 150px;
-  border-top: 1px solid currentColor;
+  border-top: 1px solid hsl(256deg, 25%, 20%);
   opacity: 0.3;
   margin: 0 auto;
-  border-color: hsl(256deg, 25%, 20%);
 }
 @media screen and (min-width: 768px) {
   main .h1::before {
