@@ -2718,28 +2718,32 @@ section:last-child {
   }
 }
 
-.show .navbar-nav,
-.collapsing .navbar-nav {
+.navbar-collapse.show,
+.navbar-collapse.collapsing {
   position: absolute;
   top: 4rem;
   left: 0;
   right: 0;
-  height: 69vh;
-  padding-top: 3rem;
-  gap: 1.5rem;
   z-index: 999;
   background-color: hsl(270deg, 9%, 17%);
 }
 
-.show .nav-link,
-.collapsing .nav-link {
+.navbar-collapse.show > .navbar-nav,
+.navbar-collapse.collapsing > .navbar-nav {
+  height: 74vh;
+  padding: 2.5rem 0;
+  gap: 1.5rem;
+}
+
+.navbar-collapse.show .nav-link,
+.navbar-collapse.collapsing .nav-link {
   font-size: 1.3rem;
   font-weight: 400;
   color: hsl(0deg, 0%, 98%);
 }
 
-.show .btn-sm,
-.collapsing .btn-sm {
+.navbar-collapse.show .btn-sm,
+.navbar-collapse.collapsing .btn-sm {
   width: 87%;
   color: hsl(0deg, 0%, 98%);
   border-color: hsl(0deg, 0%, 98%);

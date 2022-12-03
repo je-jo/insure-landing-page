@@ -1,5 +1,5 @@
  //import fonts
- 
+
  /* dm-serif-display-regular - latin */
  @font-face {
      font-family: 'DM Serif Display';
@@ -129,32 +129,68 @@
      }
  }
 
- .show .navbar-nav,
- .collapsing .navbar-nav {
-    position: absolute;
-    top: 4rem;
-    left: 0;
-    right: 0;
-    height: 69vh;
-    padding-top: 3rem;
-    gap: 1.5rem;
-    z-index: 999;
-    background-color: $dark;
+ //  .show .navbar-nav,
+ //  .collapsing .navbar-nav {
+ //     position: absolute;
+ //     top: 4rem;
+ //     left: 0;
+ //     right: 0;
+ //     height: 69vh;
+ //     padding-top: 3rem;
+ //     gap: 1.5rem;
+ //     z-index: 999;
+ //     background-color: $dark;
+ //  }
+
+ //  .show .nav-link,
+ //  .collapsing .nav-link {
+ //     font-size: 1.3rem;
+ //     font-weight: 400;
+ //     color: $light;
+ //  }
+
+ //  .show .btn-sm,
+ //  .collapsing .btn-sm {
+ //     width: 87%;
+ //     color: $light;
+ //     border-color: $light;
+ //  }
+
+ .navbar-collapse.show,
+ .navbar-collapse.collapsing {
+     position: absolute;
+     top: 4rem;
+     left: 0;
+     right: 0;
+     z-index: 999;
+     background-color: $dark;
  }
 
- .show .nav-link,
- .collapsing .nav-link {
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: $light;
+
+
+ .navbar-collapse.show>.navbar-nav,
+ .navbar-collapse.collapsing>.navbar-nav {
+    height: 74vh;
+     padding: 2.5rem 0;
+     gap: 1.5rem;
  }
 
- .show .btn-sm,
- .collapsing .btn-sm {
+ .navbar-collapse.show .nav-link,
+ .navbar-collapse.collapsing .nav-link {
+     font-size: 1.3rem;
+     font-weight: 400;
+     color: $light;
+ }
+
+ .navbar-collapse.show .btn-sm,
+ .navbar-collapse.collapsing .btn-sm {
     width: 87%;
     color: $light;
     border-color: $light;
  }
+
+
+
 
  p {
      line-height: 1.6;
@@ -179,11 +215,11 @@
  }
 
  .nav-link {
-    letter-spacing: 1.2px;
+     letter-spacing: 1.2px;
  }
 
  .btn-sm {
-    letter-spacing: 1.5px;
+     letter-spacing: 1.5px;
  }
 
  .list-unstyled {
@@ -198,17 +234,19 @@
      }
  }
 
- .custom-lbr { //line break
-    @media screen and (min-width: 768px) {
-        display: block;
-    }
-}
+ .custom-lbr {
 
-hr {
-    @media screen and (min-width: 768px) {
-        margin-bottom: 2rem;
-    }
-}
+     //line break
+     @media screen and (min-width: 768px) {
+         display: block;
+     }
+ }
+
+ hr {
+     @media screen and (min-width: 768px) {
+         margin-bottom: 2rem;
+     }
+ }
 
  @mixin deco-line {
      content: "";
