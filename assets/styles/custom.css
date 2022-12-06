@@ -47,7 +47,7 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
-  --bs-primary: hsl(256deg, 25%, 20%);
+  --bs-primary: #2d2640;
   --bs-secondary: hsl(216deg, 30%, 68%);
   --bs-success: #198754;
   --bs-info: hsl(276deg, 4%, 46%);
@@ -86,7 +86,7 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: hsl(256deg, 25%, 20%);
+  --bs-link-color: #2d2640;
   --bs-link-hover-color: #241e33;
   --bs-code-color: #d63384;
   --bs-highlight-bg: #fff3cd;
@@ -1796,8 +1796,8 @@ progress {
 
 .btn-primary {
   --bs-btn-color: #fff;
-  --bs-btn-bg: hsl(256deg, 25%, 20%);
-  --bs-btn-border-color: hsl(256deg, 25%, 20%);
+  --bs-btn-bg: #2d2640;
+  --bs-btn-border-color: #2d2640;
   --bs-btn-hover-color: #fff;
   --bs-btn-hover-bg: #262036;
   --bs-btn-hover-border-color: #241e33;
@@ -1807,8 +1807,8 @@ progress {
   --bs-btn-active-border-color: #221d30;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   --bs-btn-disabled-color: #fff;
-  --bs-btn-disabled-bg: hsl(256deg, 25%, 20%);
-  --bs-btn-disabled-border-color: hsl(256deg, 25%, 20%);
+  --bs-btn-disabled-bg: #2d2640;
+  --bs-btn-disabled-border-color: #2d2640;
 }
 
 .btn-secondary {
@@ -1931,19 +1931,19 @@ progress {
 }
 
 .btn-outline-primary {
-  --bs-btn-color: hsl(256deg, 25%, 20%);
-  --bs-btn-border-color: hsl(256deg, 25%, 20%);
+  --bs-btn-color: #2d2640;
+  --bs-btn-border-color: #2d2640;
   --bs-btn-hover-color: #fff;
-  --bs-btn-hover-bg: hsl(256deg, 25%, 20%);
-  --bs-btn-hover-border-color: hsl(256deg, 25%, 20%);
+  --bs-btn-hover-bg: #2d2640;
+  --bs-btn-hover-border-color: #2d2640;
   --bs-btn-focus-shadow-rgb: 45, 38, 64;
   --bs-btn-active-color: #fff;
-  --bs-btn-active-bg: hsl(256deg, 25%, 20%);
-  --bs-btn-active-border-color: hsl(256deg, 25%, 20%);
+  --bs-btn-active-bg: #2d2640;
+  --bs-btn-active-border-color: #2d2640;
   --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
-  --bs-btn-disabled-color: hsl(256deg, 25%, 20%);
+  --bs-btn-disabled-color: #2d2640;
   --bs-btn-disabled-bg: transparent;
-  --bs-btn-disabled-border-color: hsl(256deg, 25%, 20%);
+  --bs-btn-disabled-border-color: #2d2640;
   --bs-gradient: none;
 }
 
@@ -2221,7 +2221,7 @@ progress {
 .nav-pills {
   --bs-nav-pills-border-radius: 0.375rem;
   --bs-nav-pills-link-active-color: #fff;
-  --bs-nav-pills-link-active-bg: hsl(256deg, 25%, 20%);
+  --bs-nav-pills-link-active-bg: #2d2640;
 }
 .nav-pills .nav-link {
   background: none;
@@ -2266,7 +2266,7 @@ progress {
 
 .navbar {
   --bs-navbar-padding-x: 0;
-  --bs-navbar-padding-y: 0.5rem;
+  --bs-navbar-padding-y: 0.7rem;
   --bs-navbar-color: rgba(0, 0, 0, 0.55);
   --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
@@ -2278,10 +2278,10 @@ progress {
   --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
   --bs-navbar-nav-link-padding-x: 0.5rem;
   --bs-navbar-toggler-padding-y: 0.25rem;
-  --bs-navbar-toggler-padding-x: 0.75rem;
+  --bs-navbar-toggler-padding-x: 0;
   --bs-navbar-toggler-font-size: 1.25rem;
-  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-  --bs-navbar-toggler-border-color: rgba(0, 0, 0, 0.1);
+  --bs-navbar-toggler-icon-bg: url(../images/icons/icon-hamburger.svg);
+  --bs-navbar-toggler-border-color: transparent;
   --bs-navbar-toggler-border-radius: 0;
   --bs-navbar-toggler-focus-width: 0.25rem;
   --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
@@ -2726,6 +2726,7 @@ section:last-child {
   right: 0;
   z-index: 999;
   background-color: hsl(270deg, 9%, 17%);
+  background: url(/assets/images/patterns/bg-pattern-mobile-nav.svg) bottom left/contain no-repeat hsl(270deg, 9%, 17%);
 }
 
 .navbar-collapse.show > .navbar-nav,
@@ -2741,12 +2742,25 @@ section:last-child {
   font-weight: 400;
   color: hsl(0deg, 0%, 98%);
 }
+.navbar-collapse.show .nav-link:hover,
+.navbar-collapse.collapsing .nav-link:hover {
+  color: hsl(216deg, 30%, 68%);
+}
 
 .navbar-collapse.show .btn-sm,
 .navbar-collapse.collapsing .btn-sm {
   width: 87%;
   color: hsl(0deg, 0%, 98%);
   border-color: hsl(0deg, 0%, 98%);
+}
+.navbar-collapse.show .btn-sm:hover,
+.navbar-collapse.collapsing .btn-sm:hover {
+  background-color: hsl(216deg, 30%, 68%);
+  color: hsl(270deg, 9%, 17%);
+}
+
+.navbar-toggler[aria-expanded=true] .navbar-toggler-icon {
+  background-image: url(../images/icons/icon-close.svg);
 }
 
 p {
@@ -2806,7 +2820,7 @@ header .h1::before {
   display: block;
   height: 45px;
   width: 150px;
-  border-top: 1px solid hsl(256deg, 25%, 20%);
+  border-top: 1px solid #2d2640;
   opacity: 0.3;
   margin: 0 auto;
   display: none;
@@ -2829,7 +2843,7 @@ main .h1::before {
   display: block;
   height: 45px;
   width: 150px;
-  border-top: 1px solid hsl(256deg, 25%, 20%);
+  border-top: 1px solid #2d2640;
   opacity: 0.3;
   margin: 0 auto;
 }
@@ -2838,6 +2852,10 @@ main .h1::before {
     margin: unset;
     height: 65px;
   }
+}
+
+.list-inline-item a img:hover {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(4478%) hue-rotate(215deg) brightness(97%) contrast(86%);
 }
 
 .align-baseline {

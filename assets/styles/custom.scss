@@ -38,7 +38,7 @@
 
  //default variable overrides
 
- $primary: hsl(256, 25%, 20%); //dark-violet;
+ $primary: #2d2640; //dark-violet;
  $secondary: hsl(216, 30%, 68%); //grayish-blue;
  $info: hsl(276, 4%, 46%); //dark-grayish-violet - changed lightness to pass contrast checks;
  $light: hsl(0, 0%, 98%); //very-light-gray;
@@ -67,9 +67,15 @@
  $link-decoration: none;
  $link-hover-decoration: underline;
 
+ $navbar-padding-y: 0.7rem;
+
  $nav-link-font-size: 0.875rem;
  $nav-link-font-weight: 700;
  $nav-link-padding-y: 0;
+
+$navbar-light-toggler-icon-bg: url(../images/icons/icon-hamburger.svg);
+$navbar-light-toggler-border-color: transparent;
+$navbar-toggler-padding-x: 0;
 
  $btn-border-width: 2px;
  $btn-border-radius: 0;
@@ -129,33 +135,6 @@
      }
  }
 
- //  .show .navbar-nav,
- //  .collapsing .navbar-nav {
- //     position: absolute;
- //     top: 4rem;
- //     left: 0;
- //     right: 0;
- //     height: 69vh;
- //     padding-top: 3rem;
- //     gap: 1.5rem;
- //     z-index: 999;
- //     background-color: $dark;
- //  }
-
- //  .show .nav-link,
- //  .collapsing .nav-link {
- //     font-size: 1.3rem;
- //     font-weight: 400;
- //     color: $light;
- //  }
-
- //  .show .btn-sm,
- //  .collapsing .btn-sm {
- //     width: 87%;
- //     color: $light;
- //     border-color: $light;
- //  }
-
  .navbar-collapse.show,
  .navbar-collapse.collapsing {
      position: absolute;
@@ -164,9 +143,8 @@
      right: 0;
      z-index: 999;
      background-color: $dark;
+     background: url(/assets/images/patterns/bg-pattern-mobile-nav.svg) bottom left / contain no-repeat $dark;
  }
-
-
 
  .navbar-collapse.show>.navbar-nav,
  .navbar-collapse.collapsing>.navbar-nav {
@@ -180,6 +158,9 @@
      font-size: 1.3rem;
      font-weight: 400;
      color: $light;
+     &:hover {
+        color: $secondary;
+    }
  }
 
  .navbar-collapse.show .btn-sm,
@@ -187,10 +168,15 @@
     width: 87%;
     color: $light;
     border-color: $light;
+    &:hover {
+        background-color: $secondary;
+        color: $dark;
+    }
  }
 
-
-
+ .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-image: url(../images/icons/icon-close.svg);
+ }
 
  p {
      line-height: 1.6;
@@ -228,7 +214,6 @@
 
  @media screen and (min-width: 768px) {
      picture img {
-         //width: 540px;
          top: 16%;
          margin-bottom: -50px;
      }
@@ -276,6 +261,10 @@
 
  main .h1::before {
      @include deco-line();
+ }
+
+ .list-inline-item a img:hover {
+    filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(4478%) hue-rotate(215deg) brightness(97%) contrast(86%);
  }
 
 
