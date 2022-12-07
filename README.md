@@ -19,7 +19,7 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 
 ### Description
 
-...
+A landing page for an insurance company, an exercise in customizing Bootstrap with Sass, while maintaining perfect Lighthouse score.
 
 ### Screenshot
 
@@ -30,7 +30,7 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 
 ### Links
 
-- [Repo](https://github.com/je-jo/insure-landing-page)
+- [Solution](...)
 - [Live](https://je-jo.github.io/insure-landing-page/)
 
 ## My process
@@ -44,10 +44,12 @@ This is a solution to the [Insure landing page challenge on Frontend Mentor](htt
 
 ### Observations
 
-...
+This was a great learning experience. I learned a lot about importing modules and modifying Bootstrap maps. Eventually, I settled for overriding default variables and writting custom styles, because it made more sense with the scope of this project.
 
 ### Useful resources
 
+- [google web fonts helper]()
+- [squoosh]()
 - [CSS filter generator to convert from black to target hex color](https://codepen.io/sosuke/pen/Pjoqqp) - To change the hover color of svg icons to the exact shade, when svg images are referenced with img tags.
 - [PerfectPixel](https://www.welldonecode.com/perfectpixel/) a Chrome extension for comparing website with design image.
 

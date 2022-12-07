@@ -2695,6 +2695,36 @@ progress {
   .custom-hero {
     padding-bottom: 0;
     margin-bottom: 10rem;
+    background: #2d2640;
+  }
+}
+@media screen and (min-width: 768px) {
+  .custom-hero::before {
+    content: url("../images/patterns/bg-pattern-intro-left-desktop.svg");
+    position: absolute;
+    bottom: -16%;
+  }
+}
+.custom-hero::after {
+  content: url("../images/patterns/bg-pattern-intro-right-mobile.svg");
+  position: absolute;
+  bottom: -53%;
+  right: 0;
+}
+@media screen and (min-width: 768px) {
+  .custom-hero::after {
+    content: url("../images/patterns/bg-pattern-intro-right-desktop.svg");
+    bottom: unset;
+    top: 0;
+  }
+}
+
+.custom-intro {
+  background: url(../images/patterns/bg-pattern-intro-left-mobile.svg) top left/auto no-repeat #2d2640;
+}
+@media screen and (min-width: 768px) {
+  .custom-intro {
+    background: transparent;
   }
 }
 
@@ -2711,11 +2741,21 @@ section:last-child {
   padding: 0 2rem;
   margin-bottom: 11.5rem;
 }
+section:last-child::before {
+  content: url("../images/patterns/bg-pattern-how-we-work-mobile.svg");
+  position: absolute;
+  top: 0;
+  right: 0;
+}
 @media screen and (min-width: 768px) {
   section:last-child {
     padding: 0 5rem;
     margin-bottom: 9rem;
   }
+}
+
+footer {
+  background: url(../images/patterns/bg-pattern-footer-mobile.svg) top left/contain no-repeat hsl(0deg, 0%, 98%);
 }
 
 .navbar-collapse.show,
@@ -2726,7 +2766,7 @@ section:last-child {
   right: 0;
   z-index: 999;
   background-color: hsl(270deg, 9%, 17%);
-  background: url(/assets/images/patterns/bg-pattern-mobile-nav.svg) bottom left/contain no-repeat hsl(270deg, 9%, 17%);
+  background: url(../images/patterns/bg-pattern-mobile-nav.svg) bottom left/contain no-repeat hsl(270deg, 9%, 17%);
 }
 
 .navbar-collapse.show > .navbar-nav,
@@ -2765,6 +2805,10 @@ section:last-child {
 
 p {
   line-height: 1.6;
+}
+
+h1, .h1, h2, .h2 {
+  z-index: 999;
 }
 
 h3, .h3 {

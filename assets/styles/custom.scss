@@ -109,13 +109,40 @@ $navbar-toggler-padding-x: 0;
 
  .custom-hero {
      padding-bottom: 2rem;
-
+    
      @media screen and (min-width: 768px) {
          padding-bottom: 0;
          margin-bottom: 10rem;
+         background: $primary;
      }
+     &::before {
+        @media screen and (min-width: 768px) {
+            content: url("../images/patterns/bg-pattern-intro-left-desktop.svg");
+            position: absolute;
+            bottom: -16%;
+        }
+    }
+    &::after {
+        content: url("../images/patterns/bg-pattern-intro-right-mobile.svg");
+        position: absolute;
+        bottom: -53%;
+        right: 0;
+        @media screen and (min-width: 768px) {
+            content: url("../images/patterns/bg-pattern-intro-right-desktop.svg");
+            bottom: unset;
+            top: 0;
+        }
+    }
 
  }
+
+ .custom-intro {
+    background: url(../images/patterns/bg-pattern-intro-left-mobile.svg) top left / auto no-repeat $primary;
+    @media screen and (min-width: 768px) {
+        background: transparent;
+    }
+ }
+
 
  section:first-child {
      margin-bottom: 4rem;
@@ -128,11 +155,21 @@ $navbar-toggler-padding-x: 0;
  section:last-child {
      padding: 0 2rem;
      margin-bottom: 11.5rem;
+      &::before {
+         content: url("../images/patterns/bg-pattern-how-we-work-mobile.svg");
+         position: absolute;
+         top: 0;
+         right: 0;
+      }
 
      @media screen and (min-width: 768px) {
          padding: 0 5rem;
          margin-bottom: 9rem;
      }
+ }
+
+ footer {
+    background: url(../images/patterns/bg-pattern-footer-mobile.svg) top left / contain no-repeat $light;
  }
 
  .navbar-collapse.show,
@@ -143,7 +180,7 @@ $navbar-toggler-padding-x: 0;
      right: 0;
      z-index: 999;
      background-color: $dark;
-     background: url(/assets/images/patterns/bg-pattern-mobile-nav.svg) bottom left / contain no-repeat $dark;
+     background: url(../images/patterns/bg-pattern-mobile-nav.svg) bottom left / contain no-repeat $dark;
  }
 
  .navbar-collapse.show>.navbar-nav,
@@ -180,6 +217,10 @@ $navbar-toggler-padding-x: 0;
 
  p {
      line-height: 1.6;
+ }
+
+ h1, h2 {
+    z-index: 999;
  }
 
  h3 {
