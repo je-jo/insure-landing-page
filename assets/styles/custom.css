@@ -1,28 +1,4 @@
 @charset "UTF-8";
-/* dm-serif-display-regular - latin */
-@font-face {
-  font-family: "DM Serif Display";
-  font-style: normal;
-  font-weight: 400;
-  src: local(""), url("../fonts/dm-serif-display-v10-latin-regular.woff2") format("woff2"), url("../fonts/dm-serif-display-v10-latin-regular.woff") format("woff");
-  display: swap;
-}
-/* karla-regular - latin */
-@font-face {
-  font-family: "Karla";
-  font-style: normal;
-  font-weight: 400;
-  src: local(""), url("../fonts/karla-v23-latin-regular.woff") format("woff2"), url("../fonts/karla-v23-latin-regular.woff") format("woff");
-  display: swap;
-}
-/* karla-700 - latin */
-@font-face {
-  font-family: "Karla";
-  font-style: normal;
-  font-weight: 700;
-  src: local(""), url("../fonts/karla-v23-latin-700.woff2") format("woff2"), url("../fonts/karla-v23-latin-700.woff") format("woff");
-  display: swap;
-}
 :root {
   --bs-blue: #0d6efd;
   --bs-indigo: #6610f2;
@@ -130,7 +106,7 @@ h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-bottom: 0.5rem;
   font-family: "DM Serif Display", serif;
   font-weight: 400;
-  line-height: 1;
+  line-height: 0.95;
 }
 
 h1, .h1 {
@@ -489,37 +465,37 @@ progress {
 .display-1 {
   font-size: 5rem;
   font-weight: 300;
-  line-height: 1;
+  line-height: 0.95;
 }
 
 .display-2 {
   font-size: 4.5rem;
   font-weight: 300;
-  line-height: 1;
+  line-height: 0.95;
 }
 
 .display-3 {
   font-size: 4rem;
   font-weight: 300;
-  line-height: 1;
+  line-height: 0.95;
 }
 
 .display-4 {
   font-size: 3.5rem;
   font-weight: 300;
-  line-height: 1;
+  line-height: 0.95;
 }
 
 .display-5 {
   font-size: 3rem;
   font-weight: 300;
-  line-height: 1;
+  line-height: 0.95;
 }
 
 .display-6 {
   font-size: 2.5rem;
   font-weight: 300;
-  line-height: 1;
+  line-height: 0.95;
 }
 
 .list-unstyled {
@@ -1717,7 +1693,7 @@ progress {
 
 .btn {
   --bs-btn-padding-x: 1.8rem;
-  --bs-btn-padding-y: 0.375rem;
+  --bs-btn-padding-y: 0.25rem;
   --bs-btn-font-family: ;
   --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 400;
@@ -2266,7 +2242,7 @@ progress {
 
 .navbar {
   --bs-navbar-padding-x: 0;
-  --bs-navbar-padding-y: 0.7rem;
+  --bs-navbar-padding-y: 0.5rem;
   --bs-navbar-color: rgba(0, 0, 0, 0.55);
   --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
@@ -2695,35 +2671,36 @@ progress {
   .custom-hero {
     padding-bottom: 0;
     margin-bottom: 10rem;
-    background: #2d2640;
   }
 }
 @media screen and (min-width: 768px) {
   .custom-hero::before {
     content: url("../images/patterns/bg-pattern-intro-left-desktop.svg");
     position: absolute;
-    bottom: -16%;
+    top: 26.5rem;
   }
 }
 .custom-hero::after {
   content: url("../images/patterns/bg-pattern-intro-right-mobile.svg");
   position: absolute;
-  bottom: -53%;
   right: 0;
+  bottom: -11.25rem;
 }
 @media screen and (min-width: 768px) {
   .custom-hero::after {
     content: url("../images/patterns/bg-pattern-intro-right-desktop.svg");
-    bottom: unset;
-    top: 0;
+    top: -5.375rem;
   }
 }
 
 .custom-intro {
-  background: url(../images/patterns/bg-pattern-intro-left-mobile.svg) top left/auto no-repeat #2d2640;
+  padding-top: 3rem;
+  z-index: 90;
+  background: url(../images/patterns/bg-pattern-intro-left-mobile.svg) top left/auto no-repeat transparent;
 }
 @media screen and (min-width: 768px) {
   .custom-intro {
+    padding-top: 3.5rem;
     background: transparent;
   }
 }
@@ -2740,12 +2717,7 @@ section:first-child {
 section:last-child {
   padding: 0 2rem;
   margin-bottom: 11.5rem;
-}
-section:last-child::before {
-  content: url("../images/patterns/bg-pattern-how-we-work-mobile.svg");
-  position: absolute;
-  top: 0;
-  right: 0;
+  background: url(../images/patterns/bg-pattern-how-we-work-mobile.svg) top right/contain no-repeat #2d2640;
 }
 @media screen and (min-width: 768px) {
   section:last-child {
@@ -2753,9 +2725,23 @@ section:last-child::before {
     margin-bottom: 9rem;
   }
 }
+@media screen and (min-width: 992px) {
+  section:last-child {
+    background-image: url(../images/patterns/bg-pattern-how-we-work-desktop.svg);
+  }
+}
 
 footer {
   background: url(../images/patterns/bg-pattern-footer-mobile.svg) top left/contain no-repeat hsl(0deg, 0%, 98%);
+}
+@media screen and (min-width: 768px) {
+  footer {
+    background-image: url(../images/patterns/bg-pattern-footer-desktop.svg);
+  }
+}
+
+.navbar {
+  z-index: 999;
 }
 
 .navbar-collapse.show,
@@ -2771,7 +2757,7 @@ footer {
 
 .navbar-collapse.show > .navbar-nav,
 .navbar-collapse.collapsing > .navbar-nav {
-  height: 74vh;
+  height: 90vh;
   padding: 2.5rem 0;
   gap: 1.5rem;
 }
@@ -2807,10 +2793,6 @@ p {
   line-height: 1.6;
 }
 
-h1, .h1, h2, .h2 {
-  z-index: 999;
-}
-
 h3, .h3 {
   letter-spacing: -0.9px;
 }
@@ -2843,7 +2825,7 @@ li {
 
 @media screen and (min-width: 768px) {
   picture img {
-    top: 16%;
+    top: 18%;
     margin-bottom: -50px;
   }
 }
