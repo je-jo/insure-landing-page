@@ -18,5 +18,10 @@
   "homepage": "https://github.com/je-jo/insure-landing-page#readme",
   "dependencies": {
     "bootstrap": "^5.2.3"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "purgecss": "^5.0.0"
   }
 }
+
