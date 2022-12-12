@@ -512,7 +512,7 @@ progress {
   display: inline-block;
 }
 .list-inline-item:not(:last-child) {
-  margin-right: 1rem;
+  margin-right: 0.8rem;
 }
 
 .initialism {
@@ -2714,10 +2714,25 @@ section:first-child {
   }
 }
 
+.custom-wrapper {
+  padding: 1rem 0;
+}
+@media screen and (min-width: 768px) {
+  .custom-wrapper {
+    padding-top: 2.5rem;
+  }
+}
+.custom-wrapper p {
+  max-width: 37ch;
+}
+
 section:last-child {
   padding: 0 2rem;
   margin-bottom: 11.5rem;
   background: url(../images/patterns/bg-pattern-how-we-work-mobile.svg) top right/contain no-repeat #2d2640;
+}
+section:last-child .row {
+  padding: 3rem 0 2.5rem;
 }
 @media screen and (min-width: 768px) {
   section:last-child {
@@ -2740,8 +2755,53 @@ footer {
   }
 }
 
+.list-inline-item a img:hover {
+  filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(4478%) hue-rotate(215deg) brightness(97%) contrast(86%);
+}
+
+p {
+  line-height: 1.6;
+}
+
+h3, .h3 {
+  letter-spacing: -0.9px;
+}
+
+h4, .h4 {
+  font-family: "Karla", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 700;
+}
+
+a {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+li {
+  line-height: 2;
+}
+
+.btn-sm {
+  letter-spacing: 1.5px;
+}
+
+.list-unstyled {
+  margin-bottom: 0rem !important;
+}
+
+@media screen and (min-width: 768px) {
+  picture img {
+    top: 18%;
+    padding: 0 0.8rem;
+    margin-bottom: -50px;
+  }
+}
 .navbar {
   z-index: 999;
+}
+
+.nav-link {
+  letter-spacing: 1.2px;
 }
 
 .navbar-collapse.show,
@@ -2789,46 +2849,6 @@ footer {
   background-image: url(../images/icons/icon-close.svg);
 }
 
-p {
-  line-height: 1.6;
-}
-
-h3, .h3 {
-  letter-spacing: -0.9px;
-}
-
-h4, .h4 {
-  font-family: "Karla", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-weight: 700;
-}
-
-a {
-  text-transform: uppercase;
-  font-weight: 700;
-}
-
-li {
-  line-height: 2;
-}
-
-.nav-link {
-  letter-spacing: 1.2px;
-}
-
-.btn-sm {
-  letter-spacing: 1.5px;
-}
-
-.list-unstyled {
-  margin-bottom: 0rem !important;
-}
-
-@media screen and (min-width: 768px) {
-  picture img {
-    top: 18%;
-    margin-bottom: -50px;
-  }
-}
 @media screen and (min-width: 768px) {
   .custom-lbr {
     display: block;
@@ -2878,10 +2898,6 @@ main .h1::before {
     margin: unset;
     height: 65px;
   }
-}
-
-.list-inline-item a img:hover {
-  filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(4478%) hue-rotate(215deg) brightness(97%) contrast(86%);
 }
 
 .align-baseline {

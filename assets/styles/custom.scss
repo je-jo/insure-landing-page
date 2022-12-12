@@ -50,7 +50,7 @@
  $btn-padding-x-sm: 1rem;
  $btn-line-height: 2;
 
- $list-inline-padding: 1rem;
+ $list-inline-padding: 0.8rem;
 
  //required Bootstrap stylesheets
  @import "../../node_modules/bootstrap/scss/variables";
@@ -80,36 +80,38 @@
          padding-bottom: 0;
          margin-bottom: 10rem;
      }
+
      &::before {
-        @media screen and (min-width: 768px) {
-            content: url("../images/patterns/bg-pattern-intro-left-desktop.svg");
-            position: absolute;
-            top: 26.5rem;
-        }
+         @media screen and (min-width: 768px) {
+             content: url("../images/patterns/bg-pattern-intro-left-desktop.svg");
+             position: absolute;
+             top: 26.5rem;
+         }
      }
+
      &::after {
-        content: url("../images/patterns/bg-pattern-intro-right-mobile.svg");
-        position: absolute;
-        right: 0;
-        bottom: -11.25rem;
-        @media screen and (min-width: 768px) {
-            content: url("../images/patterns/bg-pattern-intro-right-desktop.svg");
-            top: -5.375rem;
-        }
+         content: url("../images/patterns/bg-pattern-intro-right-mobile.svg");
+         position: absolute;
+         right: 0;
+         bottom: -11.25rem;
+
+         @media screen and (min-width: 768px) {
+             content: url("../images/patterns/bg-pattern-intro-right-desktop.svg");
+             top: -5.375rem;
+         }
      }
  }
 
  .custom-intro {
-    padding-top: 3rem;
-    z-index: 90;
+     padding-top: 3rem;
+     z-index: 90;
      background: url(../images/patterns/bg-pattern-intro-left-mobile.svg) top left / auto no-repeat transparent;
 
      @media screen and (min-width: 768px) {
-        padding-top: 3.5rem;
+         padding-top: 3.5rem;
          background: transparent;
      }
  }
-
 
  section:first-child {
      margin-bottom: 4rem;
@@ -119,10 +121,26 @@
      }
  }
 
+ .custom-wrapper {
+     padding: 1rem 0;
+
+     @media screen and (min-width: 768px) {
+         padding-top: 2.5rem;
+     }
+
+     & p {
+         max-width: 37ch;
+     }
+ }
+
  section:last-child {
      padding: 0 2rem;
      margin-bottom: 11.5rem;
      background: url(../images/patterns/bg-pattern-how-we-work-mobile.svg) top right / contain no-repeat $primary;
+
+     & .row {
+         padding: 3rem 0 2.5rem;
+     }
 
      @media screen and (min-width: 768px) {
          padding: 0 5rem;
@@ -143,8 +161,54 @@
      }
  }
 
+ .list-inline-item a img:hover {
+     filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(4478%) hue-rotate(215deg) brightness(97%) contrast(86%);
+ }
+
+ p {
+     line-height: 1.6;
+ }
+
+ h3 {
+     letter-spacing: -0.9px;
+ }
+
+ h4 {
+     font-family: $font-family-sans-serif;
+     font-weight: $font-weight-bold;
+ }
+
+ a {
+     text-transform: uppercase;
+     font-weight: $font-weight-bold;
+ }
+
+ li {
+     line-height: 2;
+ }
+
+ .btn-sm {
+     letter-spacing: 1.5px;
+ }
+
+ .list-unstyled {
+     margin-bottom: 0rem !important;
+ }
+
+ @media screen and (min-width: 768px) {
+     picture img {
+         top: 18%;
+         padding: 0 0.8rem;
+         margin-bottom: -50px;
+     }
+ }
+
  .navbar {
-    z-index: 999;
+     z-index: 999;
+ }
+
+ .nav-link {
+     letter-spacing: 1.2px;
  }
 
  .navbar-collapse.show,
@@ -192,47 +256,6 @@
      background-image: url(../images/icons/icon-close.svg);
  }
 
- p {
-     line-height: 1.6;
- }
-
- h3 {
-     letter-spacing: -0.9px;
- }
-
- h4 {
-     font-family: $font-family-sans-serif;
-     font-weight: $font-weight-bold;
- }
-
- a {
-     text-transform: uppercase;
-     font-weight: $font-weight-bold;
- }
-
- li {
-     line-height: 2;
- }
-
- .nav-link {
-     letter-spacing: 1.2px;
- }
-
- .btn-sm {
-     letter-spacing: 1.5px;
- }
-
- .list-unstyled {
-     margin-bottom: 0rem !important;
- }
-
- @media screen and (min-width: 768px) {
-     picture img {
-         top: 18%;
-         margin-bottom: -50px;
-     }
- }
-
  .custom-lbr {
 
      //line break
@@ -276,10 +299,5 @@
  main .h1::before {
      @include deco-line();
  }
-
- .list-inline-item a img:hover {
-     filter: brightness(0) saturate(100%) invert(11%) sepia(7%) saturate(4478%) hue-rotate(215deg) brightness(97%) contrast(86%);
- }
-
 
  @import "../../node_modules/bootstrap/scss/utilities/api";

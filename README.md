@@ -48,8 +48,8 @@ This was a great learning experience. I learned a lot about importing modules an
 
 ### Useful resources
 
-- [google web fonts helper]()
-- [squoosh]()
+- [google web fonts helper](http://google-webfonts-helper.herokuapp.com/fonts) - A Hassle-Free Way to Self-Host Google Fonts.
+- [squoosh](https://squoosh.app/) - Image optimizer for the web.
 - [CSS filter generator to convert from black to target hex color](https://codepen.io/sosuke/pen/Pjoqqp) - To change the hover color of svg icons to the exact shade, when svg images are referenced with img tags.
 - [PerfectPixel](https://www.welldonecode.com/perfectpixel/) a Chrome extension for comparing website with design image.
 
