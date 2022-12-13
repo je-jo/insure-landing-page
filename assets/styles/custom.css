@@ -426,7 +426,6 @@ button:not(:disabled),
 .btn {
   --bs-btn-padding-x: 1.8rem;
   --bs-btn-padding-y: 0.25rem;
-  --bs-btn-font-family: ;
   --bs-btn-font-size: 1rem;
   --bs-btn-font-weight: 400;
   --bs-btn-line-height: 2;
