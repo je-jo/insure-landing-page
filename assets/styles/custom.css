@@ -987,6 +987,14 @@ main .h1::before {
   }
 }
 
+.d-flex {
+  display: flex !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
 .position-relative {
   position: relative !important;
 }
@@ -1001,6 +1009,12 @@ main .h1::before {
 
 .align-items-center {
   align-items: center !important;
+}
+
+@media (min-width: 768px) {
+  .align-items-md-start {
+    align-items: flex-start !important;
+  }
 }
 
 .mx-0 {
