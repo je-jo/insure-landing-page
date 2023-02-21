@@ -30,7 +30,7 @@ A landing page for an insurance company, an exercise in customizing Bootstrap wi
 
 ### Links
 
-- [Solution](...)
+- [Solution](https://www.frontendmentor.io/solutions/insure-landing-page-s1lTnZhQwf)
 - [Live](https://je-jo.github.io/insure-landing-page/)
 
 ## My process
